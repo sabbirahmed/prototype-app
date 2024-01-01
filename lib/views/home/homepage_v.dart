@@ -25,7 +25,9 @@ class HomepageV extends StatelessWidget {
               HomeCarouselSlider(),
               Gap(10.h),
               HomeAdvertisement(),
-              HomeProducts()
+              HomeProducts(),
+
+              Gap(50.h),
             ],
           ),
         ),
