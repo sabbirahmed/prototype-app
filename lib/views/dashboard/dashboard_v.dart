@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
-import 'package:demo_ecom/views/dashboard/widgets/navbar_w.dart';
-import 'package:demo_ecom/views/homepage/homepage_v.dart';
+import 'package:demo_ecom/views/dashboard/widgets/dashboard_navbar_w.dart';
+import 'package:demo_ecom/views/home/homepage_v.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
