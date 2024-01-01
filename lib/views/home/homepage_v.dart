@@ -1,17 +1,21 @@
+import 'package:demo_ecom/view_models/home_vm.dart';
 import 'package:demo_ecom/views/home/widgets/home_appbar_w.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomepageV extends StatelessWidget {
-  const HomepageV({super.key});
+  HomepageV({super.key});
+
+  HomeVM homeVM = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             HomeAppbar(),
-            Expanded(
+            const Expanded(
               child: Placeholder(),
             ),
           ],

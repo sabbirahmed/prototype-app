@@ -11,7 +11,7 @@ class DashboardV extends StatelessWidget {
   DashboardVM dashboardVM = Get.find();
 
   List<Widget> homePageTabs = [
-    const HomepageV(),
+    HomepageV(),
     const Placeholder(),
     const Placeholder(),
     const Placeholder(),
