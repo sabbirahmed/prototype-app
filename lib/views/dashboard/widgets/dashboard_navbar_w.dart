@@ -5,7 +5,7 @@ import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'navmenu_w.dart';
+import 'dashboard_navmenu_w.dart';
 
 class DashboardNavbarW extends StatelessWidget {
   DashboardNavbarW({
