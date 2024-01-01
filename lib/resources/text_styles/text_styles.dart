@@ -22,6 +22,12 @@ const bodyMedium16 = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
+
+const titleRegular22 = TextStyle(
+  fontSize: 22,
+  fontWeight: FontWeight.w400,
+);
+
 const bodyRegular16 = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w400,
