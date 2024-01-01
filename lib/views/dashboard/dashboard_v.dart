@@ -26,7 +26,7 @@ class DashboardV extends StatelessWidget {
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          NavbarW(),
+          DashboardNavbarW(),
           Platform.isIOS
               ? Container(
                   height: 20,
@@ -38,19 +38,13 @@ class DashboardV extends StatelessWidget {
       body: SizedBox(
         height: Get.height,
         width: Get.width,
-        child: Column(
-          children: [
-            Expanded(
-              child: PageView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                controller: dashboardVM.navigationController,
-                itemCount: homePageTabs.length,
-                itemBuilder: (context, index) {
-                  return homePageTabs[index];
-                },
-              ),
-            ),
-          ],
+        child: PageView.builder(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: dashboardVM.navigationController,
+          itemCount: homePageTabs.length,
+          itemBuilder: (context, index) {
+            return homePageTabs[index];
+          },
         ),
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:demo_ecom/models/navbar_menu_m.dart';
+import 'package:demo_ecom/models/dashboard_navbar_menu_m.dart';
 import 'package:demo_ecom/resources/assets/app_assets.dart';
 import 'package:demo_ecom/resources/color/app_colors.dart';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
@@ -7,28 +7,28 @@ import 'package:get/get.dart';
 
 import 'navmenu_w.dart';
 
-class NavbarW extends StatelessWidget {
-  NavbarW({
+class DashboardNavbarW extends StatelessWidget {
+  DashboardNavbarW({
     super.key,
   });
 
-  List<NavbarMenuM> menuCategories = [
-    NavbarMenuM(
+  List<DashboardNavbarMenuM> menuCategories = [
+    DashboardNavbarMenuM(
       name: "Cart",
       index: 0,
       iconPath: AppAssets.cartFilled,
     ),
-    NavbarMenuM(
+    DashboardNavbarMenuM(
       name: "Collect",
       index: 1,
       iconPath: AppAssets.favoriteFilled,
     ),
-    NavbarMenuM(
+    DashboardNavbarMenuM(
       name: "Chat",
       index: 2,
       iconPath: AppAssets.chatFilled,
     ),
-    NavbarMenuM(
+    DashboardNavbarMenuM(
       name: "My",
       index: 3,
       iconPath: AppAssets.personFilled,
@@ -50,7 +50,7 @@ class NavbarW extends StatelessWidget {
             children: [
               ...menuCategories.map(
                 (element) {
-                  return NavbarMenuW(
+                  return DashboardNavbarMenuW(
                     isSelected: false,
                     element: element,
                   );

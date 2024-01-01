@@ -1,17 +1,17 @@
-import 'package:demo_ecom/models/navbar_menu_m.dart';
+import 'package:demo_ecom/models/dashboard_navbar_menu_m.dart';
 import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class NavbarMenuW extends StatelessWidget {
-  const NavbarMenuW({
+class DashboardNavbarMenuW extends StatelessWidget {
+  const DashboardNavbarMenuW({
     super.key,
     required this.isSelected,
     required this.element,
   });
 
   final bool isSelected;
-  final NavbarMenuM element;
+  final DashboardNavbarMenuM element;
 
   @override
   Widget build(BuildContext context) {
