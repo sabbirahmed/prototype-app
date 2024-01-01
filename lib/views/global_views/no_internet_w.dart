@@ -1,8 +1,8 @@
 import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class NoInternet extends StatelessWidget {
-  const NoInternet({Key? key}) : super(key: key);
+class NoInternetW extends StatelessWidget {
+  const NoInternetW({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class NoInternet extends StatelessWidget {
                 'Please check your internet connection!',
                 style: bodyMedium16,
               ),
-            )
+            ),
           ],
         ),
       ),
