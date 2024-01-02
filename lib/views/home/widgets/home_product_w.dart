@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 
 import '../../../resources/text_styles/text_styles.dart';
 import '../../../view_models/home_vm.dart';
-import '../../global_views/common_network_image_widget.dart';
 import '../data/dummy_product_list_model.dart';
 import 'product_w.dart';
 
@@ -19,8 +18,8 @@ class HomeProducts extends StatelessWidget {
       return SizedBox(
         child: Column(
           children: [
-            Gap(20),
-            Text(
+            const Gap(20),
+            const Text(
               "JUST IN",
               style: titleRegular22,
             ),
@@ -44,8 +43,8 @@ class HomeProducts extends StatelessWidget {
             //     );
             //   },
             // ),
-            Gap(20),
-            Container(
+            const Gap(20),
+            SizedBox(
               height: 300.h,
               width: MediaQuery.sizeOf(context).width,
               child: CarouselSlider.builder(
@@ -77,7 +76,7 @@ class HomeProducts extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: DummyProductListModelHandler().dummyProductList.asMap().entries.map((entry) {
                 return AnimatedContainer(
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   height: 8.h,
                   width: (homeViewModel.currentPageIndex.value == entry.key) ? 30.w : 10.w,
                   margin: EdgeInsets.symmetric(horizontal: 5.w),

@@ -57,7 +57,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
                 onTap: () => _controller.animateToPage(entry.key),
                 child:
                 AnimatedContainer(
-                  duration: Duration(milliseconds: 300),
+                  duration: const Duration(milliseconds: 300),
                   height: 8.h,
                   width: (currentIndex == entry.key) ? 30.w : 10.w,
                   margin: EdgeInsets.symmetric(horizontal: 5.w),

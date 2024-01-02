@@ -18,7 +18,7 @@ class ProductWidget extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(0),
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.sizeOf(context).width / 2.5,
               height: 200,
               child: CommonNetworkImageWidget(
@@ -27,11 +27,11 @@ class ProductWidget extends StatelessWidget {
               ),
             ),
           ),
-          Gap(10),
-          Container(
+          const Gap(10),
+          SizedBox(
             width: MediaQuery.sizeOf(context).width / 2.5,
             child: Text(
-              "${dummyProductListModel.productName}",
+              dummyProductListModel.productName,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: bodyMedium14.copyWith(fontWeight: FontWeight.w500),

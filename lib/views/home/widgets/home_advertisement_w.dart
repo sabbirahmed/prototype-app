@@ -16,7 +16,7 @@ class HomeAdvertisement extends StatelessWidget {
       child: SizedBox(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 250,
               child: CommonNetworkImageWidget(
                 imageLink: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
@@ -34,7 +34,7 @@ class HomeAdvertisement extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Price Down",
+                    const Text("Price Down",
                       style: titleMedium20,
                     ),
 

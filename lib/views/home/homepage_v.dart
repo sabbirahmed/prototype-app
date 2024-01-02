@@ -22,11 +22,10 @@ class HomepageV extends StatelessWidget {
           child: Column(
             children: [
               HomeAppbar(),
-              HomeCarouselSlider(),
+              const HomeCarouselSlider(),
               Gap(10.h),
-              HomeAdvertisement(),
-              HomeProducts(),
-
+              const HomeAdvertisement(),
+              const HomeProducts(),
               Gap(50.h),
             ],
           ),
