@@ -1,5 +1,5 @@
+import 'package:demo_ecom/models/dummy_product_list_m.dart';
 import 'package:demo_ecom/resources/color/app_colors.dart';
-import 'package:demo_ecom/views/home/data/dummy_product_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -15,6 +15,8 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(0),
@@ -28,32 +30,40 @@ class ProductWidget extends StatelessWidget {
             ),
           ),
           const Gap(10),
-          SizedBox(
-            width: MediaQuery.sizeOf(context).width / 2.5,
-            child: Text(
-              dummyProductListModel.productName,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: bodyMedium14.copyWith(fontWeight: FontWeight.w500),
+          Text(
+            dummyProductListModel.productName,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: bodyMedium14.copyWith(
+              fontWeight: FontWeight.w600,
             ),
           ),
+          const Gap(4),
           Text(
             "Ostrich with Gold",
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: bodyRegular12.copyWith(color: AppColors.grey)
+            style: bodyRegular12.copyWith(
+              color: AppColors.black.withOpacity(.7),
+            ),
           ),
+          const Gap(4),
           Text(
-              "Brand New (N)",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: bodyRegular12.copyWith(color: AppColors.grey)
+            "Brand New (N)",
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: bodyRegular12.copyWith(
+              color: AppColors.black.withOpacity(.7),
+            ),
           ),
+          const Gap(4),
           Text(
-              "JPY 9,680,000",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: bodyMedium14.copyWith(fontWeight: FontWeight.w500)
+            "JPY 9,680,000",
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: bodyMedium14.copyWith(
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),

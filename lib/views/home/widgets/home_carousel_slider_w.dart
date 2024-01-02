@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../models/dummy_product_list_m.dart';
 import '../../global_views/common_network_image_widget.dart';
-import '../data/dummy_product_list_model.dart';
 
 class HomeCarouselSlider extends StatefulWidget {
   const HomeCarouselSlider({super.key});
@@ -17,6 +17,11 @@ class HomeCarouselSlider extends StatefulWidget {
 class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
   HomeVM homeVM = Get.find();
   final CarouselController _controller = CarouselController();
+  @override
+  void initState() {
+    super.initState();
+    DummyProductListModelHandler().dummyProductList.shuffle();
+  }
 
   @override
   Widget build(BuildContext context) {

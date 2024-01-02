@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+import '../../../models/dummy_product_list_m.dart';
 import '../../../resources/text_styles/text_styles.dart';
 import '../../../view_models/home_vm.dart';
-import '../data/dummy_product_list_model.dart';
 import 'product_w.dart';
 
 class HomeProducts extends StatelessWidget {
@@ -14,36 +14,22 @@ class HomeProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeVM>(builder: (homeViewModel) {
-      return SizedBox(
-        child: Column(
+    return GetBuilder<HomeVM>(
+      builder: (homeViewModel) {
+        return Column(
           children: [
-            const Gap(20),
+            Gap(10.h),
             const Text(
               "JUST IN",
               style: titleRegular22,
             ),
-            Gap(2.h),
+            Gap(4.h),
             Container(
               height: 2.h,
               width: 50.w,
               color: Colors.amber,
             ),
-            // PageView.builder(
-            //   controller: homeViewModel.pageController,
-            //   onPageChanged: (v){
-            //     homeViewModel.getCurrentPage(v);
-            //   },
-            //   itemCount: DummyProductListModelHandler().dummyProductList.length,
-            //   itemBuilder: (context, position) {
-            //     return Container(
-            //       child: Center(
-            //         child: Text('Page $position'),
-            //       ),
-            //     );
-            //   },
-            // ),
-            const Gap(20),
+            Gap(20.h),
             SizedBox(
               height: 300.h,
               width: MediaQuery.sizeOf(context).width,
@@ -72,6 +58,7 @@ class HomeProducts extends StatelessWidget {
                 ),
               ),
             ),
+            const Gap(10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: DummyProductListModelHandler().dummyProductList.asMap().entries.map((entry) {
@@ -80,29 +67,31 @@ class HomeProducts extends StatelessWidget {
                   height: 8.h,
                   width: (homeViewModel.currentPageIndex.value == entry.key) ? 30.w : 10.w,
                   margin: EdgeInsets.symmetric(horizontal: 5.w),
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(5), color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5), color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey),
                 );
               }).toList(),
             ),
-
-            Gap(20.h),
-
+            Gap(25.h),
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.grey,
-                  width: 1, //                   <--- border width here
+                  width: 1,
                 ),
               ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 5),
-                child: Text("View All".toUpperCase()),
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 5.h),
+              child: Text(
+                "View All".toUpperCase(),
+                style: bodyMedium16.copyWith(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             )
           ],
-        ),
-      );
-    });
+        );
+      },
+    );
   }
 }
