@@ -1,4 +1,4 @@
-import 'package:demo_ecom/models/drawer_item_model.dart';
+import 'package:demo_ecom/views/drawer/abstract_widget/drawer_item_model.dart';
 import 'package:demo_ecom/resources/strings/string_manager.dart';
 import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';

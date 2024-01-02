@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:demo_ecom/resources/color/app_colors.dart';
 import 'package:demo_ecom/view_models/home_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -70,7 +71,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
                       margin: EdgeInsets.symmetric(horizontal: 5.w),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: (homeVM.carouselWidgetIndex.value == entry.key) ? Colors.black : Colors.grey,
+                        color: AppColors.carouselIndicatorColor,
                       ),
                     ),
                   ),

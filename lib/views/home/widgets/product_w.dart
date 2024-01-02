@@ -42,7 +42,7 @@ class ProductWidget extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: bodyRegular12.copyWith(
-              color: AppColors.black.withOpacity(.7),
+              color: AppColors.black,
             ),
           ),
           const Gap(4),
@@ -51,7 +51,7 @@ class ProductWidget extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: bodyRegular12.copyWith(
-              color: AppColors.black.withOpacity(.7),
+              color: AppColors.black,
             ),
           ),
           const Gap(4),

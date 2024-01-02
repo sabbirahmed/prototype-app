@@ -38,7 +38,7 @@ class HomeAdvertisement extends StatelessWidget {
                     ),
                     Text(
                       "Dream Bag for a Dream\nPrice",
-                      style: bodyRegular16.copyWith(color: AppColors.grey),
+                      style: bodyRegular16.copyWith(color: AppColors.black),
                     ),
                   ],
                 ),
@@ -47,7 +47,7 @@ class HomeAdvertisement extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 30.w),
                   child: Text(
                     "SHOP NOW",
-                    style: bodyMedium16.copyWith(color: Colors.amberAccent),
+                    style: bodyMedium16.copyWith(color: AppColors.cf8d6a8),
                   ),
                 )
               ],

@@ -22,11 +22,11 @@ class HomeProducts extends StatelessWidget {
             Gap(10.h),
             Text(
               AppStrings.justIn.toUpperCase(),
-              style: titleRegular22,
+              style: titleMedium22,
             ),
             Gap(4.h),
             Container(
-              height: 2.h,
+              height: 3.h,
               width: 50.w,
               color: Colors.amber,
             ),
@@ -76,11 +76,11 @@ class HomeProducts extends StatelessWidget {
               children: DummyProductListModelHandler().dummyProductList.asMap().entries.map((entry) {
                 return AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
-                  height: 8.h,
-                  width: (homeViewModel.currentPageIndex.value == entry.key) ? 30.w : 10.w,
+                  height: 5.h,
+                  width: (homeViewModel.currentPageIndex.value == entry.key) ? 15.w : 5.w,
                   margin: EdgeInsets.symmetric(horizontal: 5.w),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5), color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey),
+                      color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey),
                 );
               }).toList(),
             ),
