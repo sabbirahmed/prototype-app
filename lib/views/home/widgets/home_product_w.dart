@@ -70,7 +70,7 @@ class HomeProducts extends StatelessWidget {
                 ),
               ),
             ),
-            const Gap(10),
+            const Gap(16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: DummyProductListModelHandler().dummyProductList.asMap().entries.map((entry) {

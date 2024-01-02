@@ -18,11 +18,9 @@ class ProductWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(0),
-            child: SizedBox(
-              width: MediaQuery.sizeOf(context).width / 2.5,
-              height: 200,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 6),
               child: CommonNetworkImageWidget(
                 imageLink: dummyProductListModel.imageLink.toString(),
                 boxFit: BoxFit.cover,
