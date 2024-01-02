@@ -15,7 +15,6 @@ void main(List<String> args) async {
 Future<void> initApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  DependencyInjection.init();
 }
 
 class PrototypeApp extends StatelessWidget {
@@ -31,6 +30,7 @@ class PrototypeApp extends StatelessWidget {
         title: 'PrototypeApp',
         debugShowCheckedModeBanner: false,
         theme: AppTheme(),
+        initialBinding: DependencyInjection(),
         getPages: AppPages.pages,
         initialRoute: Routes.INITIAL,
       ),
