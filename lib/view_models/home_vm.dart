@@ -10,6 +10,8 @@ class HomeVM extends GetxController {
   var currentPageIndex = 0.obs;
   var pageCount = 1.obs;
 
+  var carouselWidgetIndex = 0.obs;
+
   void toogleSearch() {
     searchController.clear();
     showSearchbar.value = !showSearchbar.value;
@@ -19,5 +21,4 @@ class HomeVM extends GetxController {
     currentPageIndex.value = page;
     update();
   }
-
 }

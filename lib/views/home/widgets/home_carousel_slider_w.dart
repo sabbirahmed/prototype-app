@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:demo_ecom/view_models/home_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../global_views/common_network_image_widget.dart';
 import '../data/dummy_product_list_model.dart';
@@ -13,7 +15,7 @@ class HomeCarouselSlider extends StatefulWidget {
 }
 
 class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
-  int currentIndex = 0;
+  HomeVM homeVM = Get.find();
   final CarouselController _controller = CarouselController();
 
   @override
@@ -28,9 +30,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             onPageChanged: (index, reason) {
-              setState(() {
-                currentIndex = index;
-              });
+              homeVM.carouselWidgetIndex.value = index;
             },
           ),
           items: DummyProductListModelHandler()
@@ -57,12 +57,17 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
               (entry) {
                 return GestureDetector(
                   onTap: () => _controller.animateToPage(entry.key),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    height: 8.h,
-                    width: (currentIndex == entry.key) ? 30.w : 10.w,
-                    margin: EdgeInsets.symmetric(horizontal: 5.w),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: (currentIndex == entry.key) ? Colors.black : Colors.grey),
+                  child: Obx(
+                    () => AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      height: 8.h,
+                      width: (homeVM.carouselWidgetIndex.value == entry.key) ? 30.w : 10.w,
+                      margin: EdgeInsets.symmetric(horizontal: 5.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: (homeVM.carouselWidgetIndex.value == entry.key) ? Colors.black : Colors.grey,
+                      ),
+                    ),
                   ),
                 );
               },
