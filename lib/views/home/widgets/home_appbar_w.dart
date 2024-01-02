@@ -26,7 +26,7 @@ class HomeAppbar extends StatelessWidget {
         children: [
           HomeAppbarButtonW(
             callBackFunction: () {
-              dashboardVM.scaffoldKey.currentState!.openDrawer();
+              dashboardVM.scaffoldKey.currentState?.openDrawer();
             },
             icon: AppAssets.menu,
           ),

@@ -8,7 +8,10 @@ import 'package:get/get.dart';
 class CustomDrawer extends StatelessWidget {
   final List<DrawerItem> drawerItems;
 
-  const CustomDrawer({super.key, required this.drawerItems});
+  const CustomDrawer({
+    super.key,
+    required this.drawerItems,
+  });
 
   @override
   Widget build(BuildContext context) {
