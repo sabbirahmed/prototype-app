@@ -18,18 +18,24 @@ class HomepageV extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            children: [
-              HomeAppbar(),
-              const HomeCarouselSlider(),
-              Gap(2.h),
-              const HomeAdvertisement(),
-              const HomeProducts(),
-              Gap(20.h),
-            ],
-          ),
+        child: Column(
+          children: [
+            HomeAppbar(),
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    const HomeCarouselSlider(),
+                    Gap(2.h),
+                    const HomeAdvertisement(),
+                    const HomeProducts(),
+                    Gap(20.h),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
