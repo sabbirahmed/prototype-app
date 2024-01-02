@@ -9,4 +9,10 @@ class AppStrings {
   static const String auctionTitle = "AUCTION";
   static const String englishTitle = "English";
   static const String usdTitle = "USD";
+  static const String justIn = "Just In";
+  static const String viewAll = "View All";
+  static const String cart = "Cart";
+  static const String collect = "Collect";
+  static const String chat = "Chat";
+  static const String my = "My";
 }

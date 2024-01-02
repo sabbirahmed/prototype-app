@@ -1,5 +1,6 @@
 import 'package:demo_ecom/resources/assets/app_assets.dart';
 import 'package:demo_ecom/resources/dimentions/app_sizes.dart';
+import 'package:demo_ecom/resources/strings/string_manager.dart';
 import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:demo_ecom/view_models/home_vm.dart';
@@ -43,7 +44,7 @@ class HomeAppbar extends StatelessWidget {
                     ),
                   )
                 : Text(
-                    "GinzaXiaoma".toUpperCase(),
+                    AppStrings.drawerHeaderTitle.toUpperCase(),
                     style: titleMedium20,
                   ),
           ),

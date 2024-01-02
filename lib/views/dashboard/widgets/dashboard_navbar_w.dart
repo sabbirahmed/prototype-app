@@ -1,6 +1,7 @@
 import 'package:demo_ecom/models/dashboard_navbar_menu_m.dart';
 import 'package:demo_ecom/resources/assets/app_assets.dart';
 import 'package:demo_ecom/resources/color/app_colors.dart';
+import 'package:demo_ecom/resources/strings/string_manager.dart';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,22 +15,22 @@ class DashboardNavbarW extends StatelessWidget {
 
   List<DashboardNavbarMenuM> menuCategories = [
     DashboardNavbarMenuM(
-      name: "Cart",
+      name: AppStrings.cart,
       index: 0,
       iconPath: AppAssets.cartFilled,
     ),
     DashboardNavbarMenuM(
-      name: "Collect",
+      name: AppStrings.collect,
       index: 1,
       iconPath: AppAssets.favoriteFilled,
     ),
     DashboardNavbarMenuM(
-      name: "Chat",
+      name: AppStrings.chat,
       index: 2,
       iconPath: AppAssets.chatFilled,
     ),
     DashboardNavbarMenuM(
-      name: "My",
+      name: AppStrings.my,
       index: 3,
       iconPath: AppAssets.personFilled,
     ),
