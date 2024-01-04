@@ -63,7 +63,7 @@ And many more commonly used packages, all of which are specified in the pubspec.
 ## Clone the repository:
 
 ```
-git clone https://github.com/your-username/flutter-ecommerce-prototype.git
+git clone https://github.com/sabbirahmed/prototype-app
 ```
 
 ## Navigate to the project directory:
@@ -83,3 +83,14 @@ flutter pub get
 ```
 flutter run
 ```
+
+## App Demo
+
+<table align="center" style="margin: 0px auto;">
+  <tr>
+    <th>On an iPhone 8 Simulator</th>
+  </tr>
+  <tr>
+    <td align="center"><img align="right" src="https://github.com/sabbirahmed/prototype-app/blob/develop/documentation/demo/demo-video.gif"></img></td>
+  </tr>
+</table>
