@@ -94,3 +94,7 @@ flutter run
     <td align="center"><img align="right" src="https://github.com/sabbirahmed/prototype-app/blob/develop/documentation/demo/demo-video.gif"></img></td>
   </tr>
 </table>
+
+## APK
+
+You can find the APK at: https://github.com/sabbirahmed/prototype-app/blob/develop/documentation/apk/ecom_demo_app_02_jan_2024.apk
