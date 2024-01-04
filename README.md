@@ -11,7 +11,7 @@ App Drawer: Provide a user-friendly navigation experience with an app drawer con
 # Project Structure
 The project follows the MVVM structure, which separates the application logic into three components: Model, View, and ViewModel. This structure promotes code organization and maintainability.
 
-# File Pattern Inside The `lib` Folder
+## File Pattern Inside The `lib` Folder
 
 ```
     lib/
