@@ -47,7 +47,7 @@ Make sure you have the Flutter SDK installed on your machine before proceeding.
 
 ## File Pattern Inside The `lib` Folder
 
-<img align="left" src="screenshots/folder_structure.png"></img>
+<img align="left" src="documentation/folder-structure.png"></img>
 
 ```
     lib/
