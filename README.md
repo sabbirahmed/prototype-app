@@ -78,3 +78,6 @@ Make sure you have the Flutter SDK installed on your machine before proceeding.
     <td align="center"><img align="right" src="documentation/demo.gif"></img></td>
   </tr>
 </table>
+
+## Download the apk at:
+- 
