@@ -80,4 +80,4 @@ Make sure you have the Flutter SDK installed on your machine before proceeding.
 </table>
 
 ## Download the apk at:
-- 
+- https://github.com/sabbirahmed/prototype-app/blob/develop/documentation/demo-app.apk
