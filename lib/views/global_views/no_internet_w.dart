@@ -1,4 +1,3 @@
-import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class NoInternetW extends StatelessWidget {
@@ -6,7 +5,7 @@ class NoInternetW extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -14,7 +13,7 @@ class NoInternetW extends StatelessWidget {
             Flexible(
               child: Text(
                 'Please check your internet connection!',
-                style: bodyMedium16,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
           ],

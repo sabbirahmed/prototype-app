@@ -5,7 +5,7 @@ class AppTheme {
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
-      color: Colors.blue,
+      color: Colors.white,
       iconTheme: const IconThemeData(color: Colors.white),
       toolbarTextStyle: const TextTheme(
         titleLarge: TextStyle(color: Colors.white, fontSize: 20),
@@ -22,8 +22,14 @@ class AppTheme {
       backgroundColor: Colors.white,
       surfaceTintColor: Colors.white,
     ),
-    textTheme: _buildTextTheme(lightMode: true), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.orange),
-    // Add other light mode configurations
+    textTheme: _buildTextTheme(lightMode: true),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.orange),
+    iconButtonTheme: IconButtonThemeData(
+      style: IconButton.styleFrom(
+        foregroundColor: Colors.black,
+      ),
+    ),
+    iconTheme: const IconThemeData(color: Colors.black),
   );
 
   static final darkTheme = ThemeData.dark().copyWith(

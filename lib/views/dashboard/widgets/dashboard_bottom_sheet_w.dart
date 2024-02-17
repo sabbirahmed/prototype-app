@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../resources/strings/string_manager.dart';
+import '../../support_chat/support_chat_v.dart';
 
 class AddItemBottomSheet extends StatelessWidget {
   AddItemBottomSheet({
@@ -37,12 +38,24 @@ class AddItemBottomSheet extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        AppStrings.sellBags,
-                        style: Theme.of(context).textTheme.bodyLarge,
+                      _AIBSButtons(
+                        title: AppStrings.sellBags,
+                        callBackFunction: () {
+                          Get.to(
+                            const SupportChatV(),
+                          );
+                        },
                       ),
-                      const Text(AppStrings.post),
-                      const Text(AppStrings.photo),
+                      const Divider(),
+                      _AIBSButtons(
+                        title: AppStrings.post,
+                        callBackFunction: () {},
+                      ),
+                      const Divider(),
+                      _AIBSButtons(
+                        title: AppStrings.photo,
+                        callBackFunction: () {},
+                      ),
                     ],
                   ),
                 ),
@@ -56,6 +69,35 @@ class AddItemBottomSheet extends StatelessWidget {
     return FadeInUp(
       duration: const Duration(milliseconds: 250),
       child: bottomSheetWidget,
+    );
+  }
+}
+
+class _AIBSButtons extends StatelessWidget {
+  _AIBSButtons({
+    super.key,
+    required this.title,
+    required this.callBackFunction,
+  });
+
+  String title;
+  Function callBackFunction;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        callBackFunction();
+      },
+      child: Container(
+        width: Get.width,
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        color: Colors.white,
+        child: Text(
+          title,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+      ),
     );
   }
 }

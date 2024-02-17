@@ -12,4 +12,5 @@ class AppStrings {
   static const String auctionTitle = "AUCTION";
   static const String englishTitle = "English";
   static const String usdTitle = "USD";
+  static const String supportChatTitle = "Customer Service";
 }

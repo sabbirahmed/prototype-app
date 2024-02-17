@@ -1,7 +1,6 @@
 import 'package:demo_ecom/models/drawer_item_model.dart';
 import 'package:demo_ecom/resources/color/app_colors.dart';
 import 'package:demo_ecom/resources/strings/string_manager.dart';
-import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,13 +24,15 @@ class CustomDrawer extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(16.0, 16.0, 0.0, 8.0),
               child: Stack(
                 children: [
-                  const Text(
+                  Text(
                     AppStrings.drawerHeaderTitle,
-                    style: titleMedium20,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                   Positioned(
-                    right: 0,
-                    top: -5,
+                    right: 12,
+                    top: 0,
                     child: GestureDetector(
                       onTap: () {
                         Get.back();

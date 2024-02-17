@@ -5,7 +5,6 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 import '../../../models/dummy_product_list_m.dart';
-import '../../../resources/text_styles/text_styles.dart';
 import '../../../view_models/home_vm.dart';
 import 'product_w.dart';
 
@@ -23,9 +22,9 @@ class HomeProducts extends StatelessWidget {
           child: Column(
             children: [
               Gap(10.h),
-              const Text(
+              Text(
                 "JUST IN",
-                style: titleRegular22,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               Gap(4.h),
               Container(
@@ -83,7 +82,9 @@ class HomeProducts extends StatelessWidget {
                     width: (homeViewModel.currentPageIndex.value == entry.key) ? 30.w : 10.w,
                     margin: EdgeInsets.symmetric(horizontal: 5.w),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5), color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey),
+                      borderRadius: BorderRadius.circular(5),
+                      color: (homeViewModel.currentPageIndex.value == entry.key) ? Colors.black : Colors.grey,
+                    ),
                   );
                 }).toList(),
               ),
@@ -98,10 +99,9 @@ class HomeProducts extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 5.h),
                 child: Text(
                   "View All".toUpperCase(),
-                  style: bodyMedium16.copyWith(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
               )
             ],

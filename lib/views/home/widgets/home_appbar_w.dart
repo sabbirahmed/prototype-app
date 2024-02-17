@@ -1,6 +1,5 @@
 import 'package:demo_ecom/resources/assets/app_assets.dart';
 import 'package:demo_ecom/resources/dimentions/app_sizes.dart';
-import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:demo_ecom/view_models/home_vm.dart';
 import 'package:demo_ecom/views/home/widgets/home_appbar_button_w.dart';
@@ -44,7 +43,9 @@ class HomeAppbar extends StatelessWidget {
                   )
                 : Text(
                     "GinzaXiaoma".toUpperCase(),
-                    style: titleMedium20,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
           ),
           HomeAppbarButtonW(
@@ -72,7 +73,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       cursorColor: Colors.black,
-      style: bodyRegular14,
+      style: Theme.of(context).textTheme.bodyMedium,
       decoration: const InputDecoration(
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.black),
