@@ -7,6 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 
+import 'resources/theme/theme_manager.dart';
+
 void main(List<String> args) async {
   await initApp();
   runApp(const PrototypeApp());
@@ -29,7 +31,9 @@ class PrototypeApp extends StatelessWidget {
       child: GetMaterialApp(
         title: 'PrototypeApp',
         debugShowCheckedModeBanner: false,
-        theme: AppTheme(),
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: ThemeManage.getThemeMode(),
         initialBinding: DependencyInjection(),
         getPages: AppPages.pages,
         initialRoute: Routes.INITIAL,

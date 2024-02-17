@@ -10,4 +10,5 @@ class AppAssets {
   static const String menu = "$pngPath/menu.png";
   static const String personFilled = "$pngPath/person_filled.png";
   static const String search = "$pngPath/search.png";
+  static const String plusOutlined = "$pngPath/plus_outlined.png";
 }

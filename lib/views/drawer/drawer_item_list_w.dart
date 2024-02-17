@@ -1,6 +1,5 @@
 import 'package:demo_ecom/views/drawer/abstract_widget/drawer_item_model.dart';
 import 'package:demo_ecom/resources/strings/string_manager.dart';
-import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class NewInDrawerItem implements DrawerItem {
@@ -90,21 +89,21 @@ class AuctionDrawerItem implements DrawerItem {
 class LanguageMoneyDrawerItem implements DrawerItem {
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       height: 60,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           Text(
             "${AppStrings.englishTitle} >",
-            style: bodyRegular16,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
-          Text("${AppStrings.usdTitle}  \$ >", style: bodyRegular16)
+          Text("${AppStrings.usdTitle}  \$ >", style: Theme.of(context).textTheme.bodyMedium)
         ],
       ),
     );

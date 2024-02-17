@@ -1,7 +1,5 @@
 import 'package:demo_ecom/resources/assets/app_assets.dart';
 import 'package:demo_ecom/resources/dimentions/app_sizes.dart';
-import 'package:demo_ecom/resources/strings/string_manager.dart';
-import 'package:demo_ecom/resources/text_styles/text_styles.dart';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:demo_ecom/view_models/home_vm.dart';
 import 'package:demo_ecom/views/home/widgets/home_appbar_button_w.dart';
@@ -27,7 +25,7 @@ class HomeAppbar extends StatelessWidget {
         children: [
           HomeAppbarButtonW(
             callBackFunction: () {
-              dashboardVM.scaffoldKey.currentState?.openDrawer();
+              dashboardVM.scaffoldKey.currentState!.openDrawer();
             },
             icon: AppAssets.menu,
           ),
@@ -38,14 +36,16 @@ class HomeAppbar extends StatelessWidget {
                       padding: const EdgeInsets.only(
                         bottom: 10,
                       ),
-                      child: CustomTextField(
+                      child: CustomSearchTextField(
                         controller: homeVM.searchController,
                       ),
                     ),
                   )
                 : Text(
-                    AppStrings.drawerHeaderTitle.toUpperCase(),
-                    style: titleMedium20,
+                    "GinzaXiaoma".toUpperCase(),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
           ),
           HomeAppbarButtonW(
@@ -60,8 +60,8 @@ class HomeAppbar extends StatelessWidget {
   }
 }
 
-class CustomTextField extends StatelessWidget {
-  CustomTextField({
+class CustomSearchTextField extends StatelessWidget {
+  CustomSearchTextField({
     super.key,
     required this.controller,
   });
@@ -73,7 +73,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       cursorColor: Colors.black,
-      style: bodyRegular14,
+      style: Theme.of(context).textTheme.bodyMedium,
       decoration: const InputDecoration(
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.black),

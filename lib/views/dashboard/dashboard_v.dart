@@ -3,12 +3,14 @@ import 'dart:io';
 import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:demo_ecom/views/dashboard/widgets/dashboard_navbar_w.dart';
 import 'package:demo_ecom/views/home/homepage_v.dart';
+import 'package:demo_ecom/views/home/widgets/drawer/drawer_item_list_w.dart';
+import 'package:demo_ecom/views/home/widgets/drawer/home_drawer_w.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
-import '../drawer/drawer_item_list_w.dart';
-import '../drawer/home_drawer_w.dart';
+import '../../resources/color/app_colors.dart';
+import 'widgets/dashboard_bottom_sheet_w.dart';
 
 class DashboardV extends StatelessWidget {
   DashboardVM dashboardVM = Get.find();
@@ -46,22 +48,33 @@ class DashboardV extends StatelessWidget {
           Platform.isIOS
               ? Container(
                   height: 20,
-                  color: Colors.black,
+                  color: AppColors.cF2F2F2,
                 )
               : const Gap(0),
         ],
       ),
-      body: SizedBox(
-        height: Get.height,
-        width: Get.width,
-        child: PageView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          controller: dashboardVM.navigationController,
-          itemCount: homePageTabs.length,
-          itemBuilder: (context, index) {
-            return homePageTabs[index];
-          },
-        ),
+      body: GetBuilder<DashboardVM>(
+        init: DashboardVM(),
+        initState: (_) {},
+        builder: (_) {
+          return SizedBox(
+            height: Get.height,
+            width: Get.width,
+            child: Stack(
+              children: [
+                PageView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: dashboardVM.navigationController,
+                  itemCount: homePageTabs.length,
+                  itemBuilder: (context, index) {
+                    return homePageTabs[index];
+                  },
+                ),
+                dashboardVM.showAddItemBottomSheet.value ? AddItemBottomSheet() : const SizedBox.shrink()
+              ],
+            ),
+          );
+        },
       ),
     );
   }

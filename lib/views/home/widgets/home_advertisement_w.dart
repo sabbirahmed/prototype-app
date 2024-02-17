@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import '../../../resources/text_styles/text_styles.dart';
 import '../../global_views/common_network_image_widget.dart';
 
 class HomeAdvertisement extends StatelessWidget {
@@ -32,13 +31,16 @@ class HomeAdvertisement extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "Price Down",
-                      style: titleMedium20,
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            color: AppColors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                     Text(
                       "Dream Bag for a Dream\nPrice",
-                      style: bodyRegular16.copyWith(color: AppColors.black),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(),
                     ),
                   ],
                 ),
@@ -47,7 +49,10 @@ class HomeAdvertisement extends StatelessWidget {
                   padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 30.w),
                   child: Text(
                     "SHOP NOW",
-                    style: bodyMedium16.copyWith(color: AppColors.cf8d6a8),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: Colors.amberAccent,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                 )
               ],
