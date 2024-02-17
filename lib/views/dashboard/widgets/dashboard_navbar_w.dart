@@ -24,13 +24,18 @@ class DashboardNavbarW extends StatelessWidget {
       iconPath: AppAssets.favoriteFilled,
     ),
     DashboardNavbarMenuM(
-      name: "Chat",
+      name: "Add",
       index: 2,
+      iconPath: AppAssets.plusOutlined,
+    ),
+    DashboardNavbarMenuM(
+      name: "Chat",
+      index: 3,
       iconPath: AppAssets.chatFilled,
     ),
     DashboardNavbarMenuM(
       name: "My",
-      index: 3,
+      index: 4,
       iconPath: AppAssets.personFilled,
     ),
   ];

@@ -1,10 +1,12 @@
 import 'package:demo_ecom/models/dashboard_navbar_menu_m.dart';
 import 'package:demo_ecom/resources/text_styles/text_styles.dart';
+import 'package:demo_ecom/view_models/dashboard_vm.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 class DashboardNavbarMenuW extends StatelessWidget {
-  const DashboardNavbarMenuW({
+  DashboardNavbarMenuW({
     super.key,
     required this.isSelected,
     required this.element,
@@ -12,13 +14,18 @@ class DashboardNavbarMenuW extends StatelessWidget {
 
   final bool isSelected;
   final DashboardNavbarMenuM element;
+  final DashboardVM dashboardVM = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Flexible(
       flex: 1,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          if (element.index == 2) {
+            dashboardVM.toogleBottomSheet();
+          }
+        },
         child: Container(
           height: double.maxFinite,
           width: double.maxFinite,
@@ -32,7 +39,7 @@ class DashboardNavbarMenuW extends StatelessWidget {
                 width: 25,
                 child: Image.asset(
                   element.iconPath,
-                  color: Colors.black,
+                  // color: Colors.black,
                 ),
               ),
               const Gap(6),

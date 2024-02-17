@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+import 'widgets/dashboard_bottom_sheet_w.dart';
+
 class DashboardV extends StatelessWidget {
   DashboardVM dashboardVM = Get.find();
 
@@ -50,17 +52,28 @@ class DashboardV extends StatelessWidget {
               : const Gap(0),
         ],
       ),
-      body: SizedBox(
-        height: Get.height,
-        width: Get.width,
-        child: PageView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          controller: dashboardVM.navigationController,
-          itemCount: homePageTabs.length,
-          itemBuilder: (context, index) {
-            return homePageTabs[index];
-          },
-        ),
+      body: GetBuilder<DashboardVM>(
+        init: DashboardVM(),
+        initState: (_) {},
+        builder: (_) {
+          return SizedBox(
+            height: Get.height,
+            width: Get.width,
+            child: Stack(
+              children: [
+                PageView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: dashboardVM.navigationController,
+                  itemCount: homePageTabs.length,
+                  itemBuilder: (context, index) {
+                    return homePageTabs[index];
+                  },
+                ),
+                dashboardVM.showAddItemBottomSheet.value ? AddItemBottomSheet() : const SizedBox.shrink()
+              ],
+            ),
+          );
+        },
       ),
     );
   }

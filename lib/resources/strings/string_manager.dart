@@ -2,6 +2,9 @@ class AppStrings {
   static const String drawerHeaderTitle = "GINZA XIAOMA";
   static const String newInTitle = "NEW IN";
   static const String bagsTitle = "BAGS";
+  static const String sellBags = "Sell bag";
+  static const String post = "Post";
+  static const String photo = "Photo";
   static const String accessoriesTitle = "ACCESSORIES";
   static const String fashionTitle = "FASHION";
   static const String guidesTitle = "GUIDES";
