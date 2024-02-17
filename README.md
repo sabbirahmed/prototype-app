@@ -41,7 +41,7 @@ Make sure you have the Flutter SDK installed on your machine before proceeding.
 
 <table align="center" style="margin: 0px auto;">
   <tr>
-    <td><img align="center" src="screenshots/app.png"></img></td>
+    <td><img align="center" src="documentation/app-ss.png"></img></td>
   </tr>
 </table>
 
@@ -77,9 +77,9 @@ Make sure you have the Flutter SDK installed on your machine before proceeding.
 
 <table align="center" style="margin: 0px auto;">
   <tr>
-    <th>On an iPhone 8 Simulator</th>
+    <th>On an iPhone 15 pro Simulator</th>
   </tr>
   <tr>
-    <td align="center"><img align="right" src="screenshots/gif/app_demo.gif"></img></td>
+    <td align="center"><img align="right" src="documentation/demo.gif"></img></td>
   </tr>
 </table>
