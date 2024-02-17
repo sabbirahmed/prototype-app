@@ -13,6 +13,8 @@ class AppTheme {
       titleTextStyle: const TextTheme(
         titleLarge: TextStyle(color: Colors.white, fontSize: 20),
       ).titleLarge,
+      elevation: 0,
+      scrolledUnderElevation: 0,
     ),
     dividerColor: Colors.black,
     dividerTheme: DividerThemeData(

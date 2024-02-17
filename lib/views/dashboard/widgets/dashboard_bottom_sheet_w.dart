@@ -42,7 +42,7 @@ class AddItemBottomSheet extends StatelessWidget {
                         title: AppStrings.sellBags,
                         callBackFunction: () {
                           Get.to(
-                            const SupportChatV(),
+                            () => const SupportChatV(),
                           );
                         },
                       ),
@@ -82,12 +82,14 @@ class _AIBSButtons extends StatelessWidget {
 
   String title;
   Function callBackFunction;
+  DashboardVM dashboardVM = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         callBackFunction();
+        dashboardVM.toogleBottomSheet();
       },
       child: Container(
         width: Get.width,
@@ -95,7 +97,7 @@ class _AIBSButtons extends StatelessWidget {
         color: Colors.white,
         child: Text(
           title,
-          style: Theme.of(context).textTheme.bodyLarge,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
     );

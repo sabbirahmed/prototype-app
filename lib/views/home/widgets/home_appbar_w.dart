@@ -36,7 +36,7 @@ class HomeAppbar extends StatelessWidget {
                       padding: const EdgeInsets.only(
                         bottom: 10,
                       ),
-                      child: CustomTextField(
+                      child: CustomSearchTextField(
                         controller: homeVM.searchController,
                       ),
                     ),
@@ -60,8 +60,8 @@ class HomeAppbar extends StatelessWidget {
   }
 }
 
-class CustomTextField extends StatelessWidget {
-  CustomTextField({
+class CustomSearchTextField extends StatelessWidget {
+  CustomSearchTextField({
     super.key,
     required this.controller,
   });

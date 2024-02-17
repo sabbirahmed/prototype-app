@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
+import '../../resources/color/app_colors.dart';
 import 'widgets/dashboard_bottom_sheet_w.dart';
 
 class DashboardV extends StatelessWidget {
@@ -47,7 +48,7 @@ class DashboardV extends StatelessWidget {
           Platform.isIOS
               ? Container(
                   height: 20,
-                  color: Colors.black,
+                  color: AppColors.cF2F2F2,
                 )
               : const Gap(0),
         ],
